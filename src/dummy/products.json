@@ -1,0 +1,32 @@
+[
+    {
+        "url":"./images/schoolbag.png" 
+     },
+    {
+       "url":"./images/jacket.png" 
+    },
+    {
+        "url":"./images/jacket02.png" 
+     } ,
+     {
+        "url":"./images/shoe01.png" 
+     },
+    {
+       "url":"./images/shoe02.png" 
+    },
+    {
+        "url":"./images/shoe03.png" 
+     } 
+     ,
+    {
+        "url":"./images/dummy01.png" 
+     } 
+     ,
+     {
+         "url":"./images/dummy02.png" 
+      } 
+      ,
+      {
+          "url":"./images/dummy03.png" 
+       } 
+]

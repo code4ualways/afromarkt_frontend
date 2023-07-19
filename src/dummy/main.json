@@ -1,0 +1,53 @@
+[
+   {
+      "url":"./images/main/product.png" 
+   } ,  
+     
+    {
+        "url":"./images/main/dummy01.png" 
+     } ,
+     {
+      "url":"./images/main/dummy02.png" 
+   }  ,
+    {
+      "url":"./images/main/dummy03.png" 
+   } 
+   ,
+   {
+     "url":"./images/main/dummy04.png" 
+  } 
+  ,
+  
+  {
+   "url":"./images/main/grocery.png" 
+} ,
+   {
+     "url":"./images/main/dummy05.png" 
+  } ,
+  {
+    "url":"./images/main/dummy06.png" 
+ } ,
+ {
+   "url":"./images/main/dummy07.png" 
+} ,
+{
+  "url":"./images/main/dummy08.png" 
+} ,
+{
+  "url":"./images/main/dummy09.png" 
+} ,
+{
+  "url":"./images/main/dummy10.png" 
+} ,
+{
+  "url":"./images/main/dummy11.png" 
+} ,
+{
+  "url":"./images/main/dummy12.png" 
+} ,
+{
+  "url":"./images/main/dummy13.png" 
+} 
+
+   
+]

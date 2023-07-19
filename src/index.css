@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  font-family: 'Inter', sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .h4, h4 {
+    font-size: 1.3rem !important;
+}
+.h6, h6 {
+  font-size: .9rem !important;
+}
+}
+@media only screen and (max-width: 1200px) {
+  .h4, h4 {
+    font-size: 1.1rem !important;
+}
+.h6, h6,h5,span,label {
+  font-size: .8rem !important;
+}
+.btn.btn-primary.btn-sm{
+  font-size: .7rem !important;
+}
+p {
+  font-size: .6rem !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+}
+@media only screen and (max-width: 1100px) {
+ 
+.h6, h6,h5 ,span,label{
+  font-size: .6rem !important;
+}
+p {
+  font-size: .6rem !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+}
+@media only screen and (min-width: 1300px) {
+  .col-xlg-5 {
+    flex: 0 0 auto;
+    width: 20% !important;
+  }
+}
+.btn-signIn{
+  background-color: #FFB805 !important;
+  width: 300px !important;
+  padding: 10px 10px !important;
+  border-radius: 50px !important;
+  font-weight: bold !important;
+}
