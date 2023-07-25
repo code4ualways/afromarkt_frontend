@@ -6,11 +6,12 @@ function index() {
   return (
     <Container>
       <Row
-        className="d-flex justify-content-around pt-3 pb-3 align-items-center"
+        className="d-flex justify-content-around pt-2 pb-2 align-items-center"
         style={{
           border: "1px solid #D9D9D9",
           color: "#979797",
           borderRadius: 5,
+          fontWeight: "600",
         }}
       >
         <Col
@@ -18,12 +19,15 @@ function index() {
           xs={3}
           className="d-flex justify-content-center align-items-center"
         >
-          <ChevronLeft style={{ fontWeight: "bold", fontSize: "16px" }} />
+          <img
+            src={require("../../assets/chevron.png")}
+            style={{ fontWeight: "bold", fontSize: "16px" }}
+          />
           <span className="p-2">Previous</span>
         </Col>
         <Col
           xs={6}
-          md={8}
+          md={6}
           className="d-flex justify-content-between align-items-center"
         >
           <span>1</span>
@@ -38,7 +42,10 @@ function index() {
           className="d-flex justify-content-center align-items-center"
         >
           <span className="p-2">Next</span>
-          <ChevronRight style={{ fontWeight: "bold", fontSize: "16px" }} />
+          <img
+            src={require("../../assets/chevron.png")}
+            style={{ fontWeight: "bold", fontSize: "16px", rotate: "180deg" }}
+          />{" "}
         </Col>
       </Row>
     </Container>

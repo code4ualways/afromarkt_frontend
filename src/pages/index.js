@@ -1,5 +1,3 @@
-import "../App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Components/Card";
 import SecondCard from "../Components/SecondCard";

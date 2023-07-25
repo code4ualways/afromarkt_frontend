@@ -8,15 +8,17 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { Search } from "react-bootstrap-icons";
 import Footer from "../Components/footer";
 import BreadCrumb from "../Components/BreadCrumb";
-import { GetAllProducts } from "../Redux/Slices/Products";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Products from "../dummy/products.json";
+import { GetAlleverythingleatherHook } from "../api/CategoriesQuery";
 function Category() {
-  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.category);
+  const { isLoading } = GetAlleverythingleatherHook();
+
+  useEffect(() => {}, []);
   useEffect(() => {
-    dispatch(GetAllProducts());
-    console.log(Products, "Products");
-  }, []);
+    console.log(products, "Products");
+  }, [products]);
   return (
     <Container fluid="sm">
       <Row>
@@ -24,7 +26,7 @@ function Category() {
       </Row>
       <Row className="mb-3" style={{ width: "100%", margin: "auto" }}>
         <Col className=" d-none d-sm-block" md={3}>
-          <BreadCrumb />
+          <BreadCrumb hideTite={false} />
 
           <div
             style={{
@@ -197,13 +199,13 @@ function Category() {
             src={require("../assets/categoryBanner.png")}
           />
           <Row className="p-4 mb-3 " style={{ backgroundColor: "#FAFAFA" }}>
-            {Products?.map(
+            {products?.map(
               (item, i) =>
                 i < 3 && (
                   <Col md={4} xs={6} sm={6}>
                     {" "}
                     <Card
-                      image={item?.url}
+                      item={item}
                       ship="Ships to Nigeria"
                       title="Brown Leather Bag for School, Laptop Backpack for Men and Women"
                     />
@@ -212,12 +214,12 @@ function Category() {
             )}
           </Row>
           <Row className="p-4 mb-3" style={{ backgroundColor: "#FAFAFA" }}>
-            {Products?.map((item, i) =>
+            {products?.map((item, i) =>
               i > 2 && i < 6 ? (
                 <Col md={4} xs={6} sm={6}>
                   {" "}
                   <Card
-                    image={item?.url}
+                    item={item}
                     ship="Ships to Nigeria"
                     title="Brown Leather Bag for School, Laptop Backpack for Men and Women"
                   />
@@ -225,7 +227,8 @@ function Category() {
               ) : null
             )}
           </Row>
-          <Row className="p-4 mb-3" style={{ backgroundColor: "#FAFAFA" }}>
+
+          {/* <Row className="p-4 mb-3" style={{ backgroundColor: "#FAFAFA" }}>
             {Products?.map(
               (item, i) =>
                 i < 9 &&
@@ -272,7 +275,7 @@ function Category() {
                   </Col>
                 )
             )}
-          </Row>{" "}
+          </Row>{" "} */}
           <Row>
             <Col md={1}></Col>
             <Col md={10}>

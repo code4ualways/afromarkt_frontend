@@ -13,13 +13,71 @@ code {
     monospace;
 }
 
-
+.buy-btn{
+  border: unset;
+  font-size: 16px !important;
+  background-color: #1D71B8 !important;
+  color: white !important;
+  padding: 6px 30px !important;
+  margin-right: 25px !important;
+  min-width: 150px !important;
+  border-radius: unset !important;
+  margin-bottom: 10px !important;
+}
+.checkout-btn{
+  border: unset;
+  font-size: 16px !important;
+  background-color: #1D71B8 !important;
+  color: white !important;
+  padding: 8px 30px !important;
+  margin-right: 25px !important;
+  min-width: 100% !important;
+  border-radius: unset !important;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+}
+.apply-btn{
+ 
+    border: unset;
+    font-size: 16px !important;
+    background-color: #189B62 !important;
+    color: white !important;
+    padding: 6px 30px !important;
+    margin-right: 25px !important;
+    min-width: 50% !important;
+    border-radius: unset !important;
+    margin-bottom: 10px !important;
+    border: unset !important;
+  
+}
+.sell-btn{
+  border: unset;
+  font-size: 16px !important;
+  background-color: #FFB805 !important;
+  color: black !important;
+  padding: 6px 30px !important;
+  min-width: 150px !important;
+  border-radius: unset !important;
+  margin-bottom: 10px !important;
+  border: unset !important;
+}
+.padding-inline-md{
+  padding-inline: 50px !important;
+}
+.w-80{
+  width: 80% !important;
+  min-width: 80% !important;
+}
+.p-md-30{
+  padding: 30px !important;
+}
 @media only screen and (max-width: 1400px) {
   .h4, h4 {
     font-size: 1.3rem !important;
 }
 .h6, h6 {
   font-size: .9rem !important;
+  margin-bottom: 0px !important;
 }
 }
 @media only screen and (max-width: 1200px) {
@@ -48,12 +106,27 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+.buy-btn,.sell-btn{
+  min-width: 100px !important;
+}
+.padding-inline-md{
+  padding-inline: 10px !important;
+}
+}
+@media only screen and (max-width: 900px) {
+.w-80{
+  width: 100% !important;
+}
+.p-md-30{
+  padding: 0px !important;
+}
 }
 @media only screen and (min-width: 1300px) {
   .col-xlg-5 {
     flex: 0 0 auto;
     width: 20% !important;
   }
+
 }
 .btn-signIn{
   background-color: #FFB805 !important;

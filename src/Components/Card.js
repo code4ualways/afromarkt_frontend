@@ -7,12 +7,24 @@ import { COLORS } from "../consatants";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../Redux/Slices/Cart";
 import { useState } from "react";
+import { toast } from "react-toastify";
 function CardC({ title, ship, image }) {
   const { Items } = useSelector((state) => state.Cart);
   const [added, setAdded] = useState(false);
   const Dispatch = useDispatch();
   const AddToCart = () => {
     Dispatch(addToCart());
+    toast("Item Added To Cart", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
     setAdded(true);
   };
   return (
@@ -75,12 +87,12 @@ function CardC({ title, ship, image }) {
               style={{
                 border: "unset",
                 fontSize: "14px",
-                backgroundColor: added ? "green" : COLORS.yellow,
-                color: added ? "white" : "black",
+                backgroundColor: COLORS.yellow,
+                color: "black",
               }}
               onClick={AddToCart}
             >
-              {added ? "Added " : "Add To Cart"}
+              Add To Cart{" "}
             </Button>
           </div>
         </div>

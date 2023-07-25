@@ -7,6 +7,7 @@ import { COLORS } from "../consatants";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/Slices/Cart";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function CardC() {
   const [added, setAdded] = useState(false);
@@ -14,6 +15,17 @@ function CardC() {
   const Dispatch = useDispatch();
   const AddToCart = () => {
     Dispatch(addToCart());
+    toast("Item Added To Cart", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
     setAdded(true);
   };
   return (
@@ -44,13 +56,14 @@ function CardC() {
               style={{
                 border: "unset",
                 fontSize: "14px",
-                backgroundColor: added ? "green" : COLORS.yellow,
-                color: added ? "white" : "black",
+                backgroundColor: COLORS.yellow,
+                color: "black",
                 margin: "5px 0px",
               }}
               onClick={AddToCart}
             >
-              {added ? "Added " : "Add To Cart"}{" "}
+              {/* {added ? "Added " : "Add To Cart"}{" "} */}
+              Add To Cart
             </Button>
           </div>
         </div>
