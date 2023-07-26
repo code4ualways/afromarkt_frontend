@@ -6,7 +6,13 @@ import { GetAlleverythingleather } from "../Redux/Slices/Categories";
 const geteverythingleather = async () => {
   try {
     const res = await axios.get(
-      "https://code123.pythonanywhere.com/api/everythingleather/"
+      "https://code123.pythonanywhere.com/api/everythingleather/",
+      {
+        // headers: {
+        //   Origin: "http://localhost:3000",
+        //   "Access-Control-Allow-Origin": true,
+        // },
+      }
     );
     return res;
   } catch (error) {}
@@ -16,7 +22,7 @@ export const GetAlleverythingleatherHook = (formData) => {
 
   return useQuery("geteverythingleather", geteverythingleather, {
     onSuccess: (res) => {
-      dispatch(GetAlleverythingleather(res.data));
+      dispatch(GetAlleverythingleather(res?.data));
       // localStorage.setItem('user', JSON.stringify(result.data));
       // localStorage.setItem('token', JSON.stringify(result.data.token));
       //  window.location.replace('/');
