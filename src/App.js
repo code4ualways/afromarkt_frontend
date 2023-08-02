@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import store from "./store.js";
 import { Provider } from "react-redux";
 import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 const queryClient = new QueryClient({});
 
 const Index = () => {
@@ -40,6 +41,7 @@ const Index = () => {
               path="/checkout"
               element={<Checkout setCart={setCart} cart={cart} />}
             />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
       </Provider>

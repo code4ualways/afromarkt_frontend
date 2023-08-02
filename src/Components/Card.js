@@ -9,6 +9,13 @@ import { addToCart } from "../Redux/Slices/Cart";
 import { useState } from "react";
 import { toast } from "react-toastify";
 function CardC({ title, ship, image }) {
+  const [count, setCount] = useState(1);
+  const QtyFunAdd = () => {
+    setCount(count + 1);
+  };
+  const QtyFundecrease = () => {
+    setCount(count - 1);
+  };
   const { Items } = useSelector((state) => state.Cart);
   const [added, setAdded] = useState(false);
   const Dispatch = useDispatch();
@@ -82,18 +89,53 @@ function CardC({ title, ship, image }) {
             </del>
           </div>
           <div>
-            <Button
-              size="sm"
-              style={{
-                border: "unset",
-                fontSize: "14px",
-                backgroundColor: COLORS.yellow,
-                color: "black",
-              }}
-              onClick={AddToCart}
-            >
-              Add To Cart{" "}
-            </Button>
+            {added ? (
+              <div className=" f d-flex  justify-content-center align-items-center">
+                <button
+                  className="btn btn-primary"
+                  style={{
+                    padding: "2px 10px",
+                    borderRadius: 0,
+                    background: "rgb(29, 113, 184)",
+                  }}
+                  onClick={count > 1 ? QtyFundecrease : null}
+                >
+                  -
+                </button>
+                <input
+                  value={count}
+                  style={{
+                    width: 40,
+                    border: "unset",
+                    textAlign: "center",
+                  }}
+                />
+                <button
+                  className="btn btn-primary"
+                  style={{
+                    padding: "2px 10px",
+                    borderRadius: 0,
+                    background: "rgb(29, 113, 184)",
+                  }}
+                  onClick={QtyFunAdd}
+                >
+                  +
+                </button>
+              </div>
+            ) : (
+              <Button
+                size="sm"
+                style={{
+                  border: "unset",
+                  fontSize: "14px",
+                  backgroundColor: COLORS.yellow,
+                  color: "black",
+                }}
+                onClick={AddToCart}
+              >
+                Add To Cart{" "}
+              </Button>
+            )}
           </div>
         </div>
         <p

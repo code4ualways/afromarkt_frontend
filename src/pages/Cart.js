@@ -1,15 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row, Card } from "react-bootstrap";
 import Navbar from "../Components/navbar";
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import Footer from "../Components/footer";
 import { GetAllProducts } from "../Redux/Slices/Products";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../Redux/Slices/Cart";
+
 import Products from "../dummy/products.json";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 function Category() {
   const dispatch = useDispatch();
+  const [count, setCount] = useState(1);
+  const QtyFunAdd = () => {
+    setCount(count + 1);
+  };
+  const QtyFundecrease = () => {
+    setCount(count - 1);
+  };
   useEffect(() => {
     dispatch(GetAllProducts());
     console.log(Products, "Products");
@@ -101,11 +110,12 @@ function Category() {
                                 borderRadius: 0,
                                 background: "rgb(29, 113, 184)",
                               }}
+                              onClick={count > 1 ? QtyFundecrease : null}
                             >
                               -
                             </button>
                             <input
-                              value={1}
+                              value={count}
                               style={{
                                 width: 40,
                                 border: "unset",
@@ -119,6 +129,7 @@ function Category() {
                                 borderRadius: 0,
                                 background: "rgb(29, 113, 184)",
                               }}
+                              onClick={QtyFunAdd}
                             >
                               +
                             </button>

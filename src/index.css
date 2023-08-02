@@ -57,7 +57,7 @@ code {
   color: black !important;
   padding: 6px 30px !important;
   min-width: 150px !important;
-  border-radius: unset !important;
+  border-radius: unset ;
   margin-bottom: 10px !important;
   border: unset !important;
 }

@@ -10,9 +10,12 @@ import Products from "../dummy/products.json";
 import BreadCrumb from "../Components/BreadCrumb";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
+import Paypal from "./Paypal";
+import { useState } from "react";
 function Checkout() {
   const dispatch = useDispatch();
+  const [Checkout, setCheckout] = useState(false);
+
   useEffect(() => {
     dispatch(GetAllProducts());
     console.log(Products, "Products");
@@ -200,9 +203,15 @@ function Checkout() {
                           />
                         </InputGroup>
                       </div>
-                      <Button size="sm" className="checkout-btn w-80">
+
+                      <Button
+                        size="sm"
+                        onClick={() => setCheckout(true)}
+                        className="checkout-btn w-80"
+                      >
                         CHECKOUT{" "}
                       </Button>
+                      <Paypal />
                     </Col>
                   </Row>
                 </Card.Body>

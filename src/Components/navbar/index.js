@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import { Search } from "react-bootstrap-icons";
 import Button from "react-bootstrap/Button";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Index() {
   const { Items } = useSelector((state) => state.Cart);
@@ -47,21 +48,23 @@ function Index() {
             Sign in
           </Button>{" "}
           <img src={require("../../assets/man.png")} />
-          <div style={{ position: "relative" }}>
-            <span
-              style={{
-                fontWeight: "900",
-                color: " #808080b5",
-                position: "absolute",
-                top: " -12px",
-                right: " -3px",
-                fontSize: "13px",
-              }}
-            >
-              {Items}
-            </span>
-            <img src={require("../../assets/cart.png")} />
-          </div>
+          <Link to="/cart">
+            <div style={{ position: "relative" }}>
+              <span
+                style={{
+                  fontWeight: "900",
+                  color: " #808080b5",
+                  position: "absolute",
+                  top: " -12px",
+                  right: " -3px",
+                  fontSize: "13px",
+                }}
+              >
+                {Items}
+              </span>
+              <img src={require("../../assets/cart.png")} />
+            </div>
+          </Link>
         </Col>
       </Row>
       <h4
