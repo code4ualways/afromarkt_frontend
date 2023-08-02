@@ -15,6 +15,8 @@ import store from "./store.js";
 import { Provider } from "react-redux";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 const queryClient = new QueryClient({});
 
 const Index = () => {
@@ -42,6 +44,7 @@ const Index = () => {
               element={<Checkout setCart={setCart} cart={cart} />}
             />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </BrowserRouter>
       </Provider>

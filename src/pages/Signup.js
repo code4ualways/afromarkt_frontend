@@ -20,9 +20,9 @@ function Login() {
               <Card style={{ borderRadius: "unset" }}>
                 <Card.Body>
                   <Row>
-                    <Col md={2}></Col>
+                    <Col md={1}></Col>
 
-                    <Col md={8}>
+                    <Col md={10}>
                       <div
                         className="  d-flex  justify-content-between align-items-center"
                         md={12}
@@ -33,7 +33,7 @@ function Login() {
                             fontSize: 20,
                           }}
                         >
-                          Sign in
+                          Create Account
                         </div>
                         <img src={require("../assets/logo.png")} />
                       </div>
@@ -41,7 +41,17 @@ function Login() {
                         style={{ fontWeight: "bold" }}
                         variant="outline-secondary font-bold mt-2"
                       >
-                        Email or mobile number
+                        Your name
+                      </div>
+                      <Form.Control
+                        aria-label="Example text with button addon"
+                        aria-describedby="basic-addon1"
+                      />
+                      <div
+                        style={{ fontWeight: "bold", marginTop: 25 }}
+                        variant="outline-secondary font-bold "
+                      >
+                        Mobile number or email
                       </div>
                       <Form.Control
                         aria-label="Example text with button addon"
@@ -49,7 +59,7 @@ function Login() {
                       />
                       <div
                         style={{ fontWeight: "bold", marginTop: 15 }}
-                        variant="outline-secondary font-bold "
+                        variant="outline-secondary font-bold  mt-3"
                       >
                         Password
                       </div>
@@ -61,44 +71,35 @@ function Login() {
                         style={{
                           color: "#979797",
                           fontSize: 12,
-                          textAlign: "right",
+                          textAlign: "left",
                           marginTop: 10,
                         }}
                       >
-                        Forgot Password?
+                        <img
+                          style={{ marginRight: 5 }}
+                          src={require("../assets/Info.png")}
+                        />
+                        Password must be at least 6 characters
                       </div>
+                      <div
+                        style={{ fontWeight: "bold", marginTop: 15 }}
+                        variant="outline-secondary font-bold  mt-3"
+                      >
+                        Re-enter password
+                      </div>
+                      <Form.Control
+                        aria-label="Example text with button addon"
+                        aria-describedby="basic-addon1"
+                      />
                       <Button
                         size="sm"
                         style={{ backgroundColor: "#FFB805", borderRadius: 4 }}
                         className="sell-btn w-100 mt-3"
                       >
-                        Sign In{" "}
+                        Continue{" "}
                       </Button>
                       <p className="text-center mb-2 mt-2">or</p>
-                      <Row>
-                        <Col xs={2}></Col>
-                        <Col
-                          xs={4}
-                          className="  d-flex  justify-content-center align-items-center"
-                        >
-                          <img
-                            className="m-2"
-                            src={require("../assets/Google.png")}
-                          />
-                          <p className="mb-0 ">Google</p>
-                        </Col>
-                        <Col
-                          xs={4}
-                          className="  d-flex  justify-content-center align-items-center"
-                        >
-                          <img
-                            className="m-2"
-                            src={require("../assets/Facebook (1).png")}
-                          />
-                          <p className="mb-0 ">Facebook</p>
-                        </Col>
-                        <Col xs={2}></Col>
-                      </Row>
+
                       <p className=" mb-2 mt-3">
                         By continuing, you agree to Afrimarkt’s <br />
                         <span style={{ color: "#1D71B8" }}>
@@ -109,7 +110,7 @@ function Login() {
                         <span style={{ color: "#1D71B8" }}>Need Help?</span>
                       </p>
                     </Col>
-                    <Col md={2}></Col>
+                    <Col md={1}></Col>
                   </Row>
                 </Card.Body>
               </Card>
@@ -117,39 +118,19 @@ function Login() {
 
             <Col
               md={12}
-              className="  d-flex  justify-content-center align-items-center"
+              className=" mt-3  d-flex  justify-content-center align-items-center"
             >
-              <hr style={{ width: "32%" }} />
               <p
                 className="mb-0 text-center"
-                style={{ marginInline: 5, width: "36%", color: "#979797" }}
+                style={{ marginInline: 5, color: "#979797" }}
               >
-                New to Afromarkt?
-              </p>
-              <hr style={{ width: "32%" }} />
-            </Col>
-
-            <Col md={12}>
-              <Card style={{ borderRadius: "unset", color: "#979797" }}>
-                <Card.Body>
-                  <Link
-                    style={{ textDecoration: "unset", color: "#979797" }}
-                    to="/signup"
-                  >
-                    <p className="text-center mb-0">
-                      Create your Afromarkt account
-                    </p>
+                You already have an account?{" "}
+                <span style={{ color: "#1D71B8" }}>
+                  <Link style={{ textDecoration: "unset" }} to="/login">
+                    Sign in
                   </Link>
-                </Card.Body>
-              </Card>
-              <div
-                style={{ color: "#979797" }}
-                className=" mt-2 d-flex  justify-content-center align-items-center"
-              >
-                <CopyrightIcon style={{ color: "#979797", fontSize: 16 }} />
-                <span>2023 , </span>
-                <span>Afromarkt.com</span>
-              </div>
+                </span>
+              </p>
             </Col>
           </Row>
         </Col>

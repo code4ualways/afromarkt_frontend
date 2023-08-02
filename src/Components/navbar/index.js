@@ -37,16 +37,22 @@ function Index() {
           className="d-flex flex-row justify-content-between align-items-center d-none d-md-flex"
           md={3}
         >
-          <Button
-            style={{
-              borderRadius: 50,
-              padding: "5px 20px",
-              backgroundColor: "#3AAA35",
-            }}
-            variant="success"
+          <Link
+            style={{ textDecoration: "unset", color: "#979797" }}
+            to="/login"
           >
-            Sign in
-          </Button>{" "}
+            <Button
+              style={{
+                borderRadius: 50,
+                padding: "5px 20px",
+                backgroundColor: "#3AAA35",
+              }}
+              variant="success"
+            >
+              Sign in
+            </Button>{" "}
+          </Link>
+
           <img src={require("../../assets/man.png")} />
           <Link to="/cart">
             <div style={{ position: "relative" }}>
